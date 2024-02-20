@@ -22,6 +22,7 @@ app.use(express.json());
 app.use("/users", userRoutes);
 app.use("/auth-apiKey", authnRoutes);
 app.use("/states", statesRouter);
+app.use("/one-state", statesRouter);
 app.use("/lgas", stateLGAsRoutes);
 app.use("/towns", stateTownRoutes);
 
