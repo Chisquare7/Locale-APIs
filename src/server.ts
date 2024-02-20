@@ -6,6 +6,7 @@ import statesRouter from "./routes/allStatesRoutes";
 import stateLGAsRoutes from "./routes/stateLgaRoutes";
 import stateTownRoutes from "./routes/stateTownsRoutes";
 import userRoutes from "./routes/userRoutes";
+import globalErrorHandler from "./middlewares/globalErrorHandler";
 
 
 dotenv.config();
@@ -23,6 +24,10 @@ app.use("/auth-apiKey", authnRoutes);
 app.use("/states", statesRouter);
 app.use("/lgas", stateLGAsRoutes);
 app.use("/towns", stateTownRoutes);
+
+
+//Error Handling middleware
+app.use(globalErrorHandler);
 
 
 

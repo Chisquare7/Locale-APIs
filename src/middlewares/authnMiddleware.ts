@@ -20,7 +20,7 @@ const authenticateApiKey = async (
     next()
   } catch (error) {
     console.error("Error authenticating API key:", error);
-    res.status(500).json({message: "Internal Server Error"})
+    next(error)
   }
 };
 
