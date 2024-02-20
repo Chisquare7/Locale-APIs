@@ -1,8 +1,5 @@
 import { Request, Response, NextFunction } from "express";
 import ApiKeyModel from "../models/apiKey";
-// import dotenv from "dotenv";
-
-// dotenv.config();
 
 const authenticateApiKey = async (
   req: Request,

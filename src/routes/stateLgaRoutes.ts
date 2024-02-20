@@ -4,6 +4,6 @@ import { authenticateApiKey } from "../middlewares/authnMiddleware";
 
 const stateLGAsRouter: Router = express.Router();
 
-stateLGAsRouter.get("/", authenticateApiKey, getStateLGAs);
+stateLGAsRouter.get("/:state_code", authenticateApiKey, getStateLGAs);
 
 export default stateLGAsRouter;
