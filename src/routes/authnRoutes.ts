@@ -1,8 +1,8 @@
 import express, {Router} from "express"
-import { generateApiKeyController } from "../controllers/authnControllers"
+import { generateApiKey } from "../controllers/authnControllers"
 
 const authnRouter: Router = express.Router();
 
-authnRouter.post("/", generateApiKeyController);
+authnRouter.post("/", generateApiKey);
 
 export default authnRouter;
