@@ -23,6 +23,7 @@ app.use("/users", userRoutes);
 app.use("/auth-apiKey", authnRoutes);
 app.use("/states", statesRouter);
 app.use("/one-state", statesRouter);
+app.use("/state-lgas", statesRouter);
 app.use("/lgas", stateLGAsRoutes);
 app.use("/towns", stateTownRoutes);
 
