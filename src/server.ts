@@ -7,6 +7,7 @@ import stateLGAsRoutes from "./routes/stateLgaRoutes";
 import stateTownRoutes from "./routes/stateTownsRoutes";
 import userRoutes from "./routes/userRoutes";
 import globalErrorHandler from "./middlewares/globalErrorHandler";
+import regionStatesRoutes from "./routes/regionStatesRoutes";
 
 
 dotenv.config();
@@ -26,6 +27,8 @@ app.use("/one-state", statesRouter);
 app.use("/state-lgas", statesRouter);
 app.use("/lgas", stateLGAsRoutes);
 app.use("/towns", stateTownRoutes);
+app.use("/region", regionStatesRoutes);
+app.use("/one-region", regionStatesRoutes);
 
 
 //Error Handling middleware
