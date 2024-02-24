@@ -1,6 +1,5 @@
 import mongoose, { Schema, Document } from "mongoose";
 
-// Define interfaces for nested objects
 interface Location {
   latitude: string;
   longitude: string;
@@ -27,12 +26,10 @@ interface Region {
   states: State[];
 }
 
-// Define interface for whole document
 interface regionStateDocument extends Document {
   region: Region;
 }
 
-// Define Mongoose schema
 const regionStatesSchema: Schema = new Schema({
   region: {
     name: { type: String, required: true },
@@ -59,7 +56,6 @@ const regionStatesSchema: Schema = new Schema({
   },
 });
 
-// Define and export model
 const regionStateModel = mongoose.model<regionStateDocument>(
   "regionStates",
   regionStatesSchema
