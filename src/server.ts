@@ -6,8 +6,10 @@ import statesRouter from "./routes/allStatesRoutes";
 import stateLGAsRoutes from "./routes/stateLgaRoutes";
 import stateTownRoutes from "./routes/stateTownsRoutes";
 import userRoutes from "./routes/userRoutes";
-import globalErrorHandler from "./middlewares/globalErrorHandler";
 import regionStatesRoutes from "./routes/regionStatesRoutes";
+import globalErrorHandler from "./middlewares/globalErrorHandler";
+import rateLimiterService from "./middlewares/rateLimitMiddleware";
+
 
 
 dotenv.config();
@@ -18,8 +20,12 @@ const app: Express = express();
 
 databaseConnect();
 
+const limiter = rateLimiterService();
+
 // APIs Routes
 app.use(express.json());
+app.use(limiter);
+
 app.use("/users", userRoutes);
 app.use("/auth-apiKey", authnRoutes);
 app.use("/states", statesRouter);

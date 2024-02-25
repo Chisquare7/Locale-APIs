@@ -15,7 +15,7 @@ const getNigeriaStates = async (req: Request, res: Response, next: NextFunction)
       res.status(200).json({
         success: true,
         message: "Cached Data retrieved successfully",
-        cachedData: cachedStates.data
+        data: cachedStates.data
       })
     } else {
       const response = await axios.get(`${Nigeria_Info_Api}/states`);
