@@ -18,7 +18,7 @@ const getStateLGAs = async (req: Request, res: Response, next:NextFunction): Pro
       if (state) {
         res.status(200).json({
           success: true,
-          message: "Cached data for state towns retrieved successfully",
+          message: "Cached data for state LGAs retrieved successfully",
           data: state.lgas,
         });
         return;

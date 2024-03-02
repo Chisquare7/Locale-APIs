@@ -1,5 +1,4 @@
 import express, { Express } from "express";
-import dotenv from "dotenv";
 import { databaseConnect } from "./config/mongoose"
 import authnRoutes from "./routes/authnRoutes";
 import statesRouter from "./routes/allStatesRoutes";
@@ -10,11 +9,6 @@ import regionStatesRoutes from "./routes/regionStatesRoutes";
 import globalErrorHandler from "./middlewares/globalErrorHandler";
 import rateLimiterService from "./middlewares/rateLimitMiddleware";
 
-
-
-dotenv.config();
-
-const PORT = process.env.PORT;
 
 const app: Express = express();
 
@@ -41,9 +35,4 @@ app.use("/one-region", regionStatesRoutes);
 app.use(globalErrorHandler);
 
 
-
-
-
-app.listen(PORT, () => {
-  console.log(`server started running at: http://localhost:${PORT}`);
-});
+export default app

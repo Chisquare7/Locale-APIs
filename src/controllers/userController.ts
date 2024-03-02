@@ -1,11 +1,25 @@
 import {Request, Response} from "express"
 import userModel from "../models/users"
 import bcrypt from "bcrypt"
-import { generateApiKey } from "./authnControllers";
+// import { generateApiKey } from "./authnControllers";
 
 const createUser = async (req: Request, res: Response) => {
     try {
         const {email, password} = req.body;
+
+        if (!email || !email.trim()) {
+            return res.status(400).json({
+                success: false,
+                message: "The provided email is invalid or does not exist in the database"
+            })
+        }
+
+        if (!password || !password.trim()) {
+            return res.status(400).json({
+                success: false,
+                message: "Invalid password",
+            })
+        }
 
         const existingUser = await userModel.findOne({email});
         if (existingUser) {
@@ -19,6 +33,7 @@ const createUser = async (req: Request, res: Response) => {
         const newUser = new userModel({email, password: hashedPassword});
         await newUser.save();
 
+        
         const apiKey = await newUser.generateApiKey();
 
         res.status(201).json({

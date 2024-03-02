@@ -1,8 +1,10 @@
+import mongoose from "mongoose";
 import ApiKeyModel from "../models/apiKey";
 
 
 const generateApiKey = async (userId: string) => {
     try {
+
         const existingApiKey = await ApiKeyModel.findOne({userId});
 
         if  (existingApiKey) {

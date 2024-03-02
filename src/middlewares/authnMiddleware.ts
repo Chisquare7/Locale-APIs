@@ -17,6 +17,7 @@ const authenticateApiKey = async (
 
     const existingApiKey = await ApiKeyModel.findOne({key: apiKey});
     if (!existingApiKey) {
+      console.log("API Key not found:", apiKey);
       return res.status(403).json({
         success: false,
         message: "Oops! Invalid API key"

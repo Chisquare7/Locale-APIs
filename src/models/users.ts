@@ -8,7 +8,7 @@ export interface UserDocument extends Document {
     generateApiKey: () => Promise<string>;
 }
 
-const userSchema = new Schema<UserDocument>({
+export const userSchema = new Schema<UserDocument>({
     email: {type: String, required: true, unique: true},
     password: {type: String, required: true},
 });

@@ -41,7 +41,7 @@ const getSingleState = async (
   const { state_code } = req.params;
 
   if (!state_code) {
-    res.status(400).json({
+    res.status(404).json({
       success: false,
       message: "state_code is required for this process",
     });
@@ -103,7 +103,7 @@ const getStateWithLGAs = async (
   let { state_name } = req.params;
 
   if (!state_name) {
-    res.status(400).json({
+    res.status(404).json({
       success: false,
       message: "state_name is required for this process",
     });
@@ -187,7 +187,7 @@ const getStateWithLGAs = async (
     }
 
     res.status(404).json({
-      success: true,
+      success: false,
       message: `No State found with name ${state_name}`,
     });
 
