@@ -97,7 +97,7 @@ describe("Region Routes Test", () => {
     });
 
     it("should return all regions successfully", async () => {
-        const response = await supertest(app).get("/region").set("api-key", apiKey)
+        const response = await supertest(app).get("/regions/all").set("api-key", apiKey)
 
         expect(response.status).toEqual(200);
         expect(response.body).toMatchObject({

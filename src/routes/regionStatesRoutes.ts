@@ -5,7 +5,7 @@ import { authenticateApiKey } from "../middlewares/authnMiddleware";
 const regionStatesRouter: Router = express.Router();
 
 
-regionStatesRouter.get('/', authenticateApiKey, getAllRegion);
+regionStatesRouter.get('/all', authenticateApiKey, getAllRegion);
 regionStatesRouter.get('/code/:region_code', authenticateApiKey, searchSpecificRegion);
 
 export default regionStatesRouter

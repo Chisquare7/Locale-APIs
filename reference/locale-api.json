@@ -2914,7 +2914,7 @@
         }
       ]
     },
-    "/region": {
+    "/regions/all": {
       "get": {
         "summary": "Get all regions in Nigeria",
         "tags": [],
@@ -4430,7 +4430,8 @@
             "description": "An apiKey generated when signed up, must be provided in the header"
           }
         ]
-      }
+      },
+      "parameters": []
     },
     "/one-region/code/{:region_code}": {
       "get": {
@@ -4780,6 +4781,7 @@
         "in": "header",
         "description": "Locale APIs should be protected and every developer who tries to access the API should have an API key to authenticate their request."
       }
-    }
+    },
+    "requestBodies": {}
   }
 }

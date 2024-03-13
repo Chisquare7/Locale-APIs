@@ -27,7 +27,7 @@ app.use("/one-state", statesRouter);
 app.use("/state-lgas", statesRouter);
 app.use("/lgas", stateLGAsRoutes);
 app.use("/towns", stateTownRoutes);
-app.use("/region", regionStatesRoutes);
+app.use("/regions", regionStatesRoutes);
 app.use("/one-region", regionStatesRoutes);
 
 
