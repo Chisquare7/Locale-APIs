@@ -4,7 +4,6 @@ import {expect} from "@jest/globals";
 import regionStateModel from "../models/regionStates";
 import userModel from "../models/users";
 import ApiKeyModel from "../models/apiKey";
-// import { mockMongoose, connect, closeDatabase, clearDatabase } from "./database";
 
 
 const testUser = {
@@ -63,7 +62,7 @@ describe("Region Routes Test", () => {
     beforeEach(async () => {
         await userModel.deleteMany({});
         await ApiKeyModel.deleteMany({});
-        await regionStateModel.deleteMany({});
+        // await regionStateModel.deleteMany({});
 
         server = app.listen(3000);
 

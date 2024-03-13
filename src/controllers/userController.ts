@@ -1,7 +1,6 @@
 import {Request, Response} from "express"
 import userModel from "../models/users"
 import bcrypt from "bcrypt"
-// import { generateApiKey } from "./authnControllers";
 
 const createUser = async (req: Request, res: Response) => {
     try {
