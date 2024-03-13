@@ -108,10 +108,10 @@ npm test
 ### Contributing
 We welcome contributions to the Locale API! If you'd like to contribute, please follow these steps:
 1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/AmazingFeature`).
+2. Create a new branch (`git checkout -b feature/NewFeature`).
 3. Make your changes.
-4. Commit your changes (`git commit -m 'Add some AmazingFeature`).
-5. Push to the branch (`git push origin feature/AmazingFeature`).
+4. Commit your changes (`git commit -m 'Add new Feature`).
+5. Push to the branch (`git push origin feature/NewFeature`).
 6. Open a pull request.
 Please ensure your code adheres to the project's coding standards and passes all tests.
 ### Deployment
