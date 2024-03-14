@@ -86,6 +86,11 @@ These endpoints provide lists of all regions, states, and LGAs within Nigeria. T
   - Endpoint: `/states`
   - Method: `GET`
   - Example Request: `/states`
+- List All Nigeria LGAs
+  - Description: Fetches a comprehensive list of all LGAs in Nigeria.
+  - Endpoint: `/nigeria-lgas/all`
+  - Method: `GET`
+  - Example Request: `/nigeria-lgas/all`
 ##### Note for Developers:
 To access these endpoints, ensure to include your API key in the request header using any of the following:
 - Headers:
@@ -115,7 +120,8 @@ We welcome contributions to the Locale API! If you'd like to contribute, please 
 6. Open a pull request.
 Please ensure your code adheres to the project's coding standards and passes all tests.
 ### Deployment
-  - Testable URL:
+  - Backend code deployed URL: [Deployed Base URL](https://locale-dev-api.onrender.com/)
+  - Postman Testable Documentation Link: [Locale App Documentation](https://bit.ly/locale-app-documentation)
 ### Developer
 > Chibuike Chijioke | [LinkedIn](https://www.linkedin.com/in/chibuike-chijioke-47520823a/) | [Twitter](https://twitter.com/Lifestyleafresh)
 ###### © Code Chi 2024
