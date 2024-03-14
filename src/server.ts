@@ -6,8 +6,10 @@ import stateLGAsRoutes from "./routes/stateLgaRoutes";
 import stateTownRoutes from "./routes/stateTownsRoutes";
 import userRoutes from "./routes/userRoutes";
 import regionStatesRoutes from "./routes/regionStatesRoutes";
+import allLGAsRouter from "./routes/allNigeriaLGAs";
 import globalErrorHandler from "./middlewares/globalErrorHandler";
 import rateLimiterService from "./middlewares/rateLimitMiddleware";
+
 
 
 const app: Express = express();
@@ -29,6 +31,7 @@ app.use("/lgas", stateLGAsRoutes);
 app.use("/towns", stateTownRoutes);
 app.use("/regions", regionStatesRoutes);
 app.use("/one-region", regionStatesRoutes);
+app.use("/nigeria-lgas", allLGAsRouter)
 
 
 //Error Handling middleware
