@@ -16,7 +16,7 @@ lerna-debug.log*
 .env.local
 
 
-build
+# build
 dist
 
 node_modules/
